@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kedai Ramen</title>
     <!-- Import Google Font bertema Japanese style (Yuji Boku / Brush font) & Font moden untuk jam -->
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #FFF8EE;
@@ -178,7 +178,9 @@
             letter-spacing: 0.5px;
         }
 
-        /* Banner Eksklusif KKP Pagoh */
+        /* ------------------------------------------- */
+        /* Banner Eksklusif KKP Pagoh (Menggantikan Live Visitor) */
+        /* ------------------------------------------- */
         .exclusive-banner-container {
             display: flex;
             justify-content: center;
@@ -204,6 +206,7 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
+        /* Animasi Terapung */
         @keyframes floatBanner {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(255, 140, 66, 0.6); }
@@ -239,7 +242,7 @@
             gap: 12px;
         }
 
-        /* Kesan Hover pada Card Produk */
+        /* Kesan Hover & Cantik pada Card Produk */
         .product-card {
             background: #FAFAFA;
             border: 1px solid var(--border-color);
@@ -353,6 +356,7 @@
             text-align: center;
         }
 
+        /* Butang Add to Cart Melantun */
         .add-to-cart-btn {
             background-color: var(--accent-orange);
             color: white;
@@ -377,80 +381,9 @@
             transform: scale(0.95) translateY(0);
         }
 
-        /* ------------------------------------------- */
-        /* Kotak Cadangan / Feedback Baru */
-        /* ------------------------------------------- */
-        .feedback-section {
-            background: #FFFFFF;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 15px;
-            margin-top: 10px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(232, 93, 4, 0.06);
-        }
-
-        .feedback-title {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--dark-orange);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .feedback-subtitle {
-            font-size: 11px;
-            color: var(--gray-text);
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .feedback-textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 12px;
-            resize: vertical;
-            min-height: 70px;
-            outline: none;
-            background: #FAFAFA;
-            transition: 0.3s;
-            margin-bottom: 10px;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 600;
-        }
-
-        .feedback-textarea:focus {
-            border-color: var(--accent-orange);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
-        }
-
-        .feedback-btn {
-            background: var(--light-orange);
-            color: var(--dark-orange);
-            border: 1px dashed var(--accent-orange);
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-            font-size: 12px;
-            transition: all 0.3s;
-        }
-
-        .feedback-btn:hover {
-            background: var(--accent-orange);
-            color: white;
-            border-style: solid;
-        }
-
         /* Cart Summary Section */
         .cart-section {
-            margin-top: 10px;
+            margin-top: 20px;
             border-top: 2px dashed var(--border-color);
             padding-top: 15px;
         }
@@ -703,10 +636,10 @@
 <body>
 
     <div class="container">
-        <!-- Header dengan Logo Baharu -->
+        <!-- Header -->
         <header>
             <div class="logo-container">
-                <img src="https://i.ibb.co/Rp9wxMKm/LOGO-KR.png" alt="Logo Kedai Ramen">
+                <img src="https://i.ibb.co/pjBhkBtT/LOGO-KEDAI-RAMEN.png" alt="Logo Kedai Ramen">
             </div>
             <div class="header-center">
                 <div class="header-title">
@@ -739,6 +672,7 @@
                 <div class="category-title">🍜 Instant Noodle</div>
                 <div class="products-grid">
                     
+                    <!-- Ramen 1 (Hot Chicken) -->
                     <div class="product-card">
                         <div class="product-image-box">
                             <img src="https://i.ibb.co/qFJLBRM2/BULDAK-HOT-CHICKEN.png" alt="Hot Chicken">
@@ -758,6 +692,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
                     </div>
 
+                    <!-- Ramen 2 (Cheese) -->
                     <div class="product-card">
                         <div class="product-image-box">
                             <img src="https://i.ibb.co/dsFvmrTf/BULDAK-CHEESE.png" alt="Cheese">
@@ -777,6 +712,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
                     </div>
 
+                    <!-- Ramen 3 (Original) -->
                     <div class="product-card">
                         <div class="product-image-box">
                             <img src="https://i.ibb.co/PZJGJKNH/ORIGINAL.png" alt="Original">
@@ -796,6 +732,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
                     </div>
 
+                    <!-- Ramen 4 (Quattro) -->
                     <div class="product-card">
                         <div class="product-image-box">
                             <img src="https://i.ibb.co/Psg8TqBf/QUATTRO-CHEESE.png" alt="Quattro">
@@ -823,6 +760,7 @@
                 <div class="category-title">🥤 Drink Powder</div>
                 <div class="products-grid">
                     
+                    <!-- Drink 1: Aik Chong Chocolate -->
                     <div class="product-card">
                         <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
                             🍫 CHOCOLATE
@@ -842,6 +780,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(5)">Add to Cart</button>
                     </div>
 
+                    <!-- Drink 2: Aik Chong Mocha -->
                     <div class="product-card">
                         <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
                             ☕ MOCHA
@@ -861,6 +800,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(6)">Add to Cart</button>
                     </div>
 
+                    <!-- Drink 3: Aik Chong Cappuccino -->
                     <div class="product-card">
                         <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
                             🥛 CAPPUCCINO
@@ -881,16 +821,6 @@
                     </div>
 
                 </div>
-            </div>
-
-            <!-- Feedback / Cadangan Section Baru -->
-            <div class="feedback-section">
-                <div class="feedback-title">💡 Cadangan & Penambahbaikan</div>
-                <div class="feedback-subtitle">
-                    Ada menu baru yang anda teringin nak kami jual? Atau sebarang penambahbaikan? Beritahu kami!
-                </div>
-                <textarea id="feedbackInput" class="feedback-textarea" placeholder="Contoh: Boleh tambah perisa ramen spicy sikit atau air matcha?"></textarea>
-                <button class="feedback-btn" onclick="sendFeedback()">Hantar Cadangan</button>
             </div>
 
             <!-- Cart Section -->
@@ -1088,25 +1018,6 @@
 
         function scrollToCart() {
             document.getElementById('cartSection').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Hantar Cadangan/Maklum Balas (Feedback Box Function)
-        function sendFeedback() {
-            const feedbackText = document.getElementById('feedbackInput').value.trim();
-            
-            if (!feedbackText) {
-                alert("Sila tuliskan cadangan anda di dalam kotak sebelum hantar.");
-                return;
-            }
-
-            const waNumber = "60172150138";
-            const message = `Halo Kedai Ramen! Saya ada sedikit maklum balas/cadangan untuk kedai anda:\n\n"${feedbackText}"\n\nTerima kasih!`;
-            
-            const encodedUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
-            window.open(encodedUrl, '_blank');
-            
-            // Kosongkan kotak selepas dihantar
-            document.getElementById('feedbackInput').value = "";
         }
 
         // Kemaskini Paparan Summary Dalam Modal (Dinamik)
