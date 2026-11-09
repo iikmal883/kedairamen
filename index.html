@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kedai Ramen</title>
-    <!-- Import Google Font bertema Japanese style (Yuji Boku / Brush font) & Font moden untuk jam -->
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon / Logo pada Tab Pelayar -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/pjBhkBtT/LOGO-KEDAI-RAMEN.png">
+    <!-- Import Google Font bertema Japanese style (Yuji Boku / Brush font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #FFF8EE;
@@ -25,11 +27,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Latar Belakang Meriah - Corak Dot Lembut */
         body {
             background-color: var(--bg-color);
-            background-image: radial-gradient(#F0D5C0 1.5px, transparent 1.5px);
-            background-size: 25px 25px;
             color: var(--text-color);
             padding: 15px;
             display: flex;
@@ -43,16 +42,16 @@
             max-width: 480px;
             background: var(--card-bg);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(232, 93, 4, 0.12);
+            box-shadow: 0 8px 24px rgba(232, 93, 4, 0.08);
             overflow: hidden;
             border: 1px solid var(--border-color);
             margin-bottom: 30px;
         }
 
-        /* Header */
+        /* Header rapat ke atas */
         header {
             background-color: var(--light-orange);
-            padding: 5px 15px;
+            padding: 2px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,11 +62,11 @@
         .logo-container {
             display: flex;
             align-items: center;
-            height: 110px;
+            height: 120px;
         }
 
         .logo-container img {
-            height: 110px;
+            height: 120px;
             width: auto;
             object-fit: contain;
         }
@@ -78,139 +77,77 @@
             align-items: center;
             gap: 0px;
             flex: 1;
-            position: relative;
         }
 
         /* Japanese Brush Style Font untuk Kedai Ramen */
         .header-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Yuji Boku', serif;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.1;
             text-align: center;
+            letter-spacing: 1px;
         }
 
         .title-kedai {
-            font-family: 'Yuji Boku', serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #5C4033;
-            letter-spacing: 2px;
+            color: #5C4033; /* Warna Coklat */
+            display: block;
         }
 
         .title-ramen {
-            font-family: 'Yuji Boku', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--dark-orange);
-            margin-top: -6px;
-            text-shadow: 1px 1px 0px rgba(232, 93, 4, 0.15);
-        }
-
-        .title-jp {
-            font-size: 9px;
-            color: white;
-            background: #D32F2F;
-            padding: 2px 6px;
-            border-radius: 4px;
-            letter-spacing: 2px;
+            color: var(--dark-orange); /* Warna Oren */
+            display: block;
             margin-top: -2px;
-            font-weight: bold;
-            box-shadow: 1px 2px 4px rgba(211, 47, 47, 0.3);
         }
 
         /* Aesthetic Date & Time Box */
         .time-box {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
-            padding: 8px 12px;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 140, 66, 0.3);
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(232, 93, 4, 0.08);
+            background: linear-gradient(135deg, #ffffff 0%, #FFF3E4 100%);
+            padding: 6px 10px;
+            border-radius: 12px;
+            border: 1px solid #FFD0A8;
+            text-align: right;
+            box-shadow: 0 4px 12px rgba(232, 93, 4, 0.12);
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            min-width: 110px;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .time-box:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 6px 20px rgba(232, 93, 4, 0.15);
+            gap: 2px;
+            min-width: 130px;
         }
 
         .time-header {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             gap: 6px;
         }
 
         .pulse-dot {
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             background-color: #25D366;
             border-radius: 50%;
-            box-shadow: 0 0 8px #25D366;
+            box-shadow: 0 0 6px #25D366;
             animation: pulseSlow 2s infinite ease-in-out;
         }
 
         @keyframes pulseSlow {
-            0% { opacity: 0.4; transform: scale(0.85); }
-            50% { opacity: 1; transform: scale(1.3); }
-            100% { opacity: 0.4; transform: scale(0.85); }
+            0% { opacity: 0.3; transform: scale(0.85); }
+            50% { opacity: 1; transform: scale(1.25); }
+            100% { opacity: 0.3; transform: scale(0.85); }
         }
 
         .date-text {
-            font-family: 'Quicksand', sans-serif;
             font-size: 10px;
             font-weight: 700;
-            color: #8C5C38;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--dark-orange);
+            letter-spacing: 0.2px;
         }
 
         .time-text {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 700;
-            color: var(--dark-orange);
-            letter-spacing: 0.5px;
-        }
-
-        /* ------------------------------------------- */
-        /* Banner Eksklusif KKP Pagoh (Menggantikan Live Visitor) */
-        /* ------------------------------------------- */
-        .exclusive-banner-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            padding-top: 5px;
-        }
-
-        .exclusive-banner {
-            background: linear-gradient(135deg, #FF8C42 0%, #FFB703 100%);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 13px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
-            letter-spacing: 0.5px;
-            animation: floatBanner 3s ease-in-out infinite;
-            border: 2px solid #FFF;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        /* Animasi Terapung */
-        @keyframes floatBanner {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(255, 140, 66, 0.6); }
-            100% { transform: translateY(0px); }
+            color: var(--text-color);
+            letter-spacing: 0.4px;
         }
 
         /* Main Content */
@@ -239,55 +176,36 @@
         .products-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
         }
 
-        /* Kesan Hover & Cantik pada Card Produk */
         .product-card {
             background: #FAFAFA;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(232, 93, 4, 0.15);
-            border-color: var(--accent-orange);
-            background: #FFFFFF;
         }
 
         .product-image-box {
             width: 100%;
             height: 100px;
             background: white;
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--border-color);
             padding: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover .product-image-box {
-            border-color: var(--accent-orange);
         }
 
         .product-image-box img {
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover .product-image-box img {
-            transform: scale(1.05);
         }
 
         .product-info h3 {
@@ -296,7 +214,6 @@
             line-height: 1.2;
             height: 28px;
             overflow: hidden;
-            font-weight: 700;
         }
 
         .product-details-row {
@@ -306,17 +223,14 @@
         }
 
         .product-info .price {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--dark-orange);
-            font-weight: 800;
+            font-weight: bold;
         }
 
         .stock-label {
             font-size: 9px;
             color: var(--gray-text);
-            background: #EEEEEE;
-            padding: 2px 6px;
-            border-radius: 10px;
         }
 
         /* Quantity Controls */
@@ -326,7 +240,7 @@
             justify-content: space-between;
             background: white;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 6px;
             padding: 3px 6px;
         }
 
@@ -336,49 +250,34 @@
             color: var(--dark-orange);
             width: 24px;
             height: 24px;
-            border-radius: 6px;
+            border-radius: 4px;
             font-weight: bold;
             cursor: pointer;
             font-size: 14px;
-            transition: 0.2s;
-        }
-
-        .qty-btn:active {
-            transform: scale(0.85);
-            background: var(--accent-orange);
-            color: white;
         }
 
         .qty-display {
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 600;
             width: 25px;
             text-align: center;
         }
 
-        /* Butang Add to Cart Melantun */
         .add-to-cart-btn {
             background-color: var(--accent-orange);
             color: white;
             border: none;
-            padding: 8px;
-            border-radius: 8px;
-            font-weight: 700;
+            padding: 7px;
+            border-radius: 6px;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
             font-size: 11px;
-            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.3);
+            transition: 0.2s;
         }
 
         .add-to-cart-btn:hover {
             background-color: var(--dark-orange);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(232, 93, 4, 0.4);
-        }
-
-        .add-to-cart-btn:active {
-            transform: scale(0.95) translateY(0);
         }
 
         /* Cart Summary Section */
@@ -401,27 +300,25 @@
             font-size: 12px;
             margin-bottom: 5px;
             color: var(--gray-text);
-            padding: 4px 0;
-            border-bottom: 1px solid #FAFAFA;
         }
 
         .cart-total {
             display: flex;
             justify-content: space-between;
-            font-size: 15px;
-            font-weight: 800;
+            font-size: 14px;
+            font-weight: bold;
             color: var(--text-color);
             margin: 10px 0;
             border-top: 1px solid var(--border-color);
-            padding-top: 8px;
+            padding-top: 6px;
         }
 
         .checkout-btn {
             background-color: #25D366;
             color: white;
             border: none;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 10px;
+            border-radius: 8px;
             font-weight: bold;
             width: 100%;
             cursor: pointer;
@@ -429,71 +326,59 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            gap: 6px;
+            transition: 0.2s;
         }
 
         .checkout-btn:hover {
             background-color: #1EBE5D;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
         }
 
-        .checkout-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* Floating Cart Button */
+        /* Floating Cart Button at Bottom Right */
         .floating-cart {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #FF8C42 0%, #E85D04 100%);
+            bottom: 20px;
+            right: 20px;
+            background: var(--dark-orange);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(232, 93, 4, 0.4);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             cursor: pointer;
             z-index: 99;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            border: 3px solid white;
-        }
-
-        .floating-cart:hover {
-            transform: scale(1.1) rotate(5deg);
+            transition: transform 0.2s;
+            border: 2px solid white;
         }
 
         .floating-cart:active {
-            transform: scale(0.9);
+            transform: scale(0.92);
         }
 
         .floating-cart svg {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             fill: white;
         }
 
         .cart-badge {
             position: absolute;
-            top: -2px;
-            right: -2px;
+            top: 2px;
+            right: 2px;
             background: #25D366;
             color: white;
-            font-size: 11px;
-            font-weight: 800;
-            width: 22px;
-            height: 22px;
+            font-size: 10px;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 2px solid white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         /* Modal Popup */
@@ -503,8 +388,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(3px);
+            background: rgba(0, 0, 0, 0.5);
             display: none;
             justify-content: center;
             align-items: center;
@@ -516,19 +400,19 @@
             background: white;
             width: 100%;
             max-width: 400px;
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border: 1px solid var(--border-color);
             max-height: 90vh;
             overflow-y: auto;
         }
 
         .modal-header {
-            font-size: 16px;
-            font-weight: 800;
+            font-size: 15px;
+            font-weight: bold;
             color: var(--dark-orange);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -537,99 +421,80 @@
         .close-modal {
             background: none;
             border: none;
-            font-size: 22px;
+            font-size: 18px;
             cursor: pointer;
             color: var(--gray-text);
-            transition: 0.2s;
-        }
-        
-        .close-modal:hover {
-            color: var(--dark-orange);
-            transform: scale(1.2);
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .form-group label {
             display: block;
             font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 6px;
+            font-weight: 600;
+            margin-bottom: 5px;
             color: var(--text-color);
         }
 
         .form-group input, .form-group select {
             width: 100%;
-            padding: 10px 12px;
+            padding: 9px;
             border: 1px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 13px;
+            border-radius: 8px;
+            font-size: 12px;
             outline: none;
-            background: #FAFAFA;
-            transition: 0.2s;
+            background: var(--bg-color);
         }
 
         .form-group input:focus, .form-group select:focus {
             border-color: var(--accent-orange);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
         }
 
         .delivery-note {
             font-size: 11px;
             color: var(--dark-orange);
             background: var(--light-orange);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 8px;
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 6px;
             display: none;
             border: 1px dashed var(--accent-orange);
-            font-weight: 600;
         }
 
         .modal-footer {
-            margin-top: 20px;
+            margin-top: 15px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn-cancel {
-            background: #F5F5F5;
-            color: #555;
-            border: 1px solid #DDD;
-            padding: 12px;
-            border-radius: 10px;
-            flex: 1;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 13px;
-            transition: 0.2s;
-        }
-        
-        .btn-cancel:hover {
             background: #E0E0E0;
+            color: #333;
+            border: none;
+            padding: 9px;
+            border-radius: 8px;
+            flex: 1;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
         }
 
         .btn-confirm {
             background: var(--accent-orange);
             color: white;
             border: none;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 9px;
+            border-radius: 8px;
             flex: 1;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
-            font-size: 13px;
-            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.3);
-            transition: 0.2s;
+            font-size: 12px;
         }
 
         .btn-confirm:hover {
             background: var(--dark-orange);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(232, 93, 4, 0.4);
         }
     </style>
 </head>
@@ -645,13 +510,12 @@
                 <div class="header-title">
                     <span class="title-kedai">KEDAI</span>
                     <span class="title-ramen">RAMEN</span>
-                    <span class="title-jp">ラーメン</span>
                 </div>
             </div>
             <div class="time-box">
                 <div class="time-header">
-                    <span class="pulse-dot"></span>
                     <span class="date-text" id="malaysiaDate">Loading...</span>
+                    <span class="pulse-dot"></span>
                 </div>
                 <div class="time-text" id="malaysiaTime">Loading...</div>
             </div>
@@ -659,13 +523,6 @@
 
         <!-- Content -->
         <div class="content">
-
-            <!-- Banner Khas untuk warga KKP Pagoh! -->
-            <div class="exclusive-banner-container">
-                <div class="exclusive-banner">
-                    ✨ Khas untuk warga KKP Pagoh! 🍜
-                </div>
-            </div>
             
             <!-- Category 1: Instant Noodle -->
             <div class="category-section">
@@ -766,7 +623,7 @@
                             🍫 CHOCOLATE
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Chocolate (1 Sachet)</h3>
+                            <h3>Aik Chong Chocolate</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price5">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock5">-</span></span>
@@ -786,7 +643,7 @@
                             ☕ MOCHA
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Mocha (1 Sachet)</h3>
+                            <h3>Aik Chong Mocha</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price6">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock6">-</span></span>
@@ -806,7 +663,7 @@
                             🥛 CAPPUCCINO
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Cappuccino (1 Sachet)</h3>
+                            <h3>Aik Chong Cappuccino</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price7">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock7">-</span></span>
@@ -898,11 +755,11 @@
                 </div>
             </div>
 
-            <div style="margin-top: 15px; font-size: 13px; font-weight: 800; color: var(--dark-orange);">
+            <div style="margin-top: 12px; font-size: 12px; font-weight: bold; color: var(--dark-orange);">
                 Order Confirmation Summary:
             </div>
-            <div id="modalCartSummary" style="font-size: 12px; color: var(--gray-text); margin-top: 6px; background: var(--bg-color); padding: 12px; border-radius: 10px; border: 1px dashed var(--border-color);">
-                <!-- Summary inserted here secara dinamik -->
+            <div id="modalCartSummary" style="font-size: 11px; color: var(--gray-text); margin-top: 4px; background: var(--bg-color); padding: 8px; border-radius: 6px;">
+                <!-- Summary inserted here -->
             </div>
 
             <div class="modal-footer">
@@ -913,18 +770,18 @@
     </div>
 
     <script>
-        // Data Produk
+        // State data produk dinamik berasaskan ID 1 hingga 7
         const products = {
             1: { name: "Hot Chicken (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             2: { name: "Cheese (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             3: { name: "Original (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             4: { name: "Quattro (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            5: { name: "Aik Chong Chocolate (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            6: { name: "Aik Chong Mocha (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            7: { name: "Aik Chong Cappuccino (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 }
+            5: { name: "Aik Chong Chocolate", price: 0, stock: 0, qty: 0, cartQty: 0 },
+            6: { name: "Aik Chong Mocha", price: 0, stock: 0, qty: 0, cartQty: 0 },
+            7: { name: "Aik Chong Cappuccino", price: 0, stock: 0, qty: 0, cartQty: 0 }
         };
 
-        // Tarik Data Google Sheets
+        // Fungsi untuk tarik data Stok dan Harga dari Google Sheets
         async function fetchSheetData() {
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxSzG1Oi0QyrC7fIYns1N94szUKBE7zfSrdpevmtRENMZ35JYTuDikVecgGExhdDsD7/exec';
             try {
@@ -937,27 +794,33 @@
                         products[id].price = parseFloat(item.price);
                         products[id].stock = parseInt(item.stock);
 
+                        // Kemas kini paparan harga pada laman web
                         const priceEl = document.getElementById(`price${id}`);
                         if (priceEl) priceEl.innerText = `RM ${products[id].price.toFixed(2)}`;
 
+                        // Kemas kini paparan stok pada laman web
                         const stockEl = document.getElementById(`stock${id}`);
                         if (stockEl) stockEl.innerText = products[id].stock;
                     }
                 });
-                console.log("Stok & Harga berjaya dikemaskini!");
+                console.log("Stok & Harga berjaya dikemaskini dari Google Sheets!");
             } catch (error) {
                 console.error("Gagal menyambung ke Google Sheets:", error);
             }
         }
 
+        // Panggil fungsi tarik data apabila web dibuka
         fetchSheetData();
         setInterval(fetchSheetData, 30000);
 
         // Live Malaysia Date & Time
+        // ... (kod masa kekal sama)
         function updateMalaysiaDateTime() {
             const now = new Date();
+            
             const dateOptions = { timeZone: 'Asia/Kuala_Lumpur', year: 'numeric', month: 'short', day: 'numeric' };
             const dateString = new Intl.DateTimeFormat('en-US', dateOptions).format(now);
+            
             const timeOptions = { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
             const timeString = new Intl.DateTimeFormat('en-US', timeOptions).format(now);
             
@@ -967,7 +830,7 @@
         setInterval(updateMalaysiaDateTime, 1000);
         updateMalaysiaDateTime();
 
-        // Sistem Troli
+        // Update quantity selection
         function updateQty(id, change) {
             let newQty = products[id].qty + change;
             if (newQty < 0) newQty = 0;
@@ -979,15 +842,17 @@
             document.getElementById(`qty${id}`).innerText = newQty;
         }
 
+        // Add to cart action
         function addToCart(id) {
             if (products[id].qty === 0) {
-                alert("Sila pilih kuantiti terlebih dahulu!");
+                alert("Please select a quantity first!");
                 return;
             }
             products[id].cartQty = products[id].qty;
             renderCart();
         }
 
+        // Render Cart Summary
         function renderCart() {
             const cartList = document.getElementById('cartItemsList');
             let html = '';
@@ -1002,12 +867,12 @@
                     totalItemsCount += item.cartQty;
                     let subtotal = item.price * item.cartQty;
                     total += subtotal;
-                    html += `<div class="cart-item"><span style="font-weight:600; color:#333;">• ${item.name} x ${item.cartQty}</span><span style="font-weight:600;">RM ${subtotal.toFixed(2)}</span></div>`;
+                    html += `<div class="cart-item"><span>• ${item.name} x ${item.cartQty}</span><span>RM ${subtotal.toFixed(2)}</span></div>`;
                 }
             }
 
             if (!hasItems) {
-                cartList.innerHTML = '<div style="font-size: 12px; color: var(--gray-text); text-align:center; padding: 10px;">Cart is empty.</div>';
+                cartList.innerHTML = '<div style="font-size: 12px; color: var(--gray-text);">Cart is empty.</div>';
             } else {
                 cartList.innerHTML = html;
             }
@@ -1016,35 +881,12 @@
             document.getElementById('cartBadge').innerText = totalItemsCount;
         }
 
+        // Scroll to cart section
         function scrollToCart() {
             document.getElementById('cartSection').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Kemaskini Paparan Summary Dalam Modal (Dinamik)
-        function updateModalSummary() {
-            let summaryHtml = '';
-            let subtotal = 0;
-
-            for (let id in products) {
-                if (products[id].cartQty > 0) {
-                    let itemTotal = products[id].price * products[id].cartQty;
-                    subtotal += itemTotal;
-                    summaryHtml += `<div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span>• ${products[id].name} x ${products[id].cartQty}</span> <span>RM ${itemTotal.toFixed(2)}</span></div>`;
-                }
-            }
-
-            const method = document.getElementById('deliveryMethod').value;
-            if (method === 'COD') {
-                summaryHtml += `<div style="display:flex; justify-content:space-between; color: var(--dark-orange); font-weight:700; margin-top:8px;"><span>• Caj Penghantaran (COD)</span> <span>RM 0.50</span></div>`;
-                subtotal += 0.50;
-            }
-
-            summaryHtml += `<hr style="border: 0; border-top: 1px dashed #CCC; margin: 10px 0;">`;
-            summaryHtml += `<div style="display:flex; justify-content:space-between; font-size:14px; font-weight: 800; color: var(--text-color);"><span>Jumlah Keseluruhan:</span> <span>RM ${subtotal.toFixed(2)}</span></div>`;
-            
-            document.getElementById('modalCartSummary').innerHTML = summaryHtml;
-        }
-
+        // Open Modal Checkout
         function openCheckoutModal() {
             let totalItems = 0;
             for (let id in products) {
@@ -1052,15 +894,17 @@
             }
 
             if (totalItems === 0) {
-                alert("Troli anda kosong! Sila tambah pesanan sebelum checkout.");
+                alert("Your cart is empty! Please add items before checkout.");
                 return;
             }
 
-            document.getElementById('deliveryMethod').value = "";
-            document.getElementById('pickupNote').style.display = 'none';
-            document.getElementById('codFields').style.display = 'none';
-
-            updateModalSummary(); 
+            let summaryHtml = '';
+            for (let id in products) {
+                if (products[id].cartQty > 0) {
+                    summaryHtml += `• ${products[id].name} x ${products[id].cartQty} = RM ${(products[id].price * products[id].cartQty).toFixed(2)}<br>`;
+                }
+            }
+            document.getElementById('modalCartSummary').innerHTML = summaryHtml;
             document.getElementById('checkoutModal').style.display = 'flex';
         }
 
@@ -1068,6 +912,8 @@
             document.getElementById('checkoutModal').style.display = 'none';
         }
 
+        // Handle delivery option change
+        function handleDeliveryCommand() {}
         function handleDeliveryChange() {
             const method = document.getElementById('deliveryMethod').value;
             const pickupNote = document.getElementById('pickupNote');
@@ -1083,28 +929,27 @@
                 pickupNote.style.display = 'none';
                 codFields.style.display = 'none';
             }
-
-            updateModalSummary(); 
         }
 
+        // Send to WhatsApp format
         function sendToWhatsApp() {
             const name = document.getElementById('custName').value.trim();
-            const phone = document.getElementById('custPhone').value.trim();
+            const phone = document.getElementById('custPhone'].value.trim();
             const payment = document.getElementById('paymentMethod').value;
             const method = document.getElementById('deliveryMethod').value;
             const block = document.getElementById('custBlock').value.trim();
 
             if (!name || !phone || !payment || !method) {
-                alert("Sila isi semua butiran yang diperlukan (Nama, Nombor Telefon, Pembayaran, dan Penghantaran).");
+                alert("Please filter/fill in all required fields.");
                 return;
             }
 
             if (method === 'COD' && !block) {
-                alert("Sila masukkan nombor Blok/Bilik untuk COD.");
+                alert("Please fill in your Block number for COD.");
                 return;
             }
 
-            let orderText = `Halo Kedai Ramen! Saya ingin membuat pesanan berikut:\n\n`;
+            let orderText = `Halo Kedai Ramen! Saya ingin membuat pesanan berikut:\n`;
             let subtotal = 0;
 
             for (let id in products) {
@@ -1119,12 +964,11 @@
             if (method === 'COD') {
                 deliveryText += ` (${block})`;
                 subtotal += 0.50; 
-                orderText += `• Caj Penghantaran COD = RM 0.50\n`;
             } else if (method === 'Pickup') {
                 deliveryText += ` (Meet at DOBI BLOK A12)`;
             }
 
-            orderText += `\n*Butiran Pelanggan:*\nNama: ${name}\nTelefon: ${phone}\nPembayaran: ${payment}\nPenghantaran: ${deliveryText}\n\n*Jumlah Keseluruhan: RM ${subtotal.toFixed(2)}*\n\nTerima kasih! Sila sahkan pesanan saya.`;
+            orderText += `\nCustomer Name: ${name}\nPhone: ${phone}\nPayment Method: ${payment}\nKaedah penghantaran: ${deliveryText}\n*Jumlah Keseluruhan: RM ${subtotal.toFixed(2)}*\n\nTerima kasih! Sila sahkan pesanan saya.`;
 
             const waNumber = "60172150138";
             const encodedUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(orderText)}`;
