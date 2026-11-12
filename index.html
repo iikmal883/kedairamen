@@ -397,11 +397,34 @@
         .cart-item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 12px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             color: var(--gray-text);
             padding: 4px 0;
             border-bottom: 1px solid #FAFAFA;
+        }
+
+        .remove-item-btn {
+            background: #FFE5D0;
+            color: #E85D04;
+            border: none;
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            margin-left: 8px;
+        }
+
+        .remove-item-btn:hover {
+            background: #E85D04;
+            color: white;
         }
 
         .cart-total {
@@ -731,7 +754,7 @@
                         <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
                     </div>
 
-                    <!-- Ramen 4 (Quattro Cheese) - Imej Baharu -->
+                    <!-- Ramen 4 (Quattro Cheese) -->
                     <div class="product-card">
                         <div class="product-image-box">
                             <img src="https://i.ibb.co/rKR7k8TD/QUATTRO-CHEESE.png" alt="QUATTRO-CHEESE">
@@ -999,12 +1022,28 @@
             document.getElementById(`qty${id}`).innerText = newQty;
         }
 
+        // Fungsi Add to Cart kumulatif (tambah kuantiti sedia ada jika ditekan lagi)
         function addToCart(id) {
             if (products[id].qty === 0) {
                 alert("Sila pilih kuantiti terlebih dahulu!");
                 return;
             }
-            products[id].cartQty = products[id].qty;
+            
+            let proposedCartQty = products[id].cartQty + products[id].qty;
+            if (proposedCartQty > products[id].stock) {
+                alert("Jumlah dalam troli melebihi stok yang ada!");
+                return;
+            }
+
+            products[id].cartQty = proposedCartQty;
+            renderCart();
+        }
+
+        // Fungsi Buang Item spesifik dari Troli
+        function removeFromCart(id) {
+            products[id].cartQty = 0;
+            products[id].qty = 0;
+            document.getElementById(`qty${id}`).innerText = 0;
             renderCart();
         }
 
@@ -1022,7 +1061,13 @@
                     totalItemsCount += item.cartQty;
                     let subtotal = item.price * item.cartQty;
                     total += subtotal;
-                    html += `<div class="cart-item"><span style="font-weight:600; color:#333;">• ${item.name} x ${item.cartQty}</span><span style="font-weight:600;">RM ${subtotal.toFixed(2)}</span></div>`;
+                    html += `
+                        <div class="cart-item">
+                            <span style="font-weight:600; color:#333; flex: 1;">• ${item.name} x ${item.cartQty}</span>
+                            <span style="font-weight:600; margin-right: 8px;">RM ${subtotal.toFixed(2)}</span>
+                            <button class="remove-item-btn" onclick="removeFromCart(${id})" title="Buang Item">×</button>
+                        </div>
+                    `;
                 }
             }
 
