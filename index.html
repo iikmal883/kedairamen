@@ -182,9 +182,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* ------------------------------------------- */
-        /* Banner Eksklusif KKP Pagoh (Menggantikan Live Visitor) */
-        /* ------------------------------------------- */
+        /* Banner Eksklusif KKP Pagoh */
         .exclusive-banner-container {
             display: flex;
             justify-content: center;
@@ -210,7 +208,6 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        /* Animasi Terapung */
         @keyframes floatBanner {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(255, 140, 66, 0.6); }
@@ -246,7 +243,6 @@
             gap: 12px;
         }
 
-        /* Kesan Hover & Cantik pada Card Produk */
         .product-card {
             background: #FAFAFA;
             border: 1px solid var(--border-color);
@@ -360,7 +356,6 @@
             text-align: center;
         }
 
-        /* Butang Add to Cart Melantun */
         .add-to-cart-btn {
             background-color: var(--accent-orange);
             color: white;
@@ -756,21 +751,13 @@
                         <button class="add-to-cart-btn" onclick="addToCart(4)">Add to Cart</button>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- Category 2: Drink Powder -->
-            <div class="category-section">
-                <div class="category-title">🥤 Drink Powder</div>
-                <div class="products-grid">
-                    
-                    <!-- Drink 1: Aik Chong Chocolate -->
+                    <!-- Ramen 5 (Maggi Kari) -->
                     <div class="product-card">
-                        <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
-                            🍫 CHOCOLATE
+                        <div class="product-image-box">
+                            <img src="https://i.ibb.co/x8RMZd3p/MAGGI-KARI.png" alt="MAGGI-KARI">
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Chocolate (1 Sachet)</h3>
+                            <h3>MAGGI KARI (1 bungkus / 5 pek)</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price5">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock5">-</span></span>
@@ -784,13 +771,21 @@
                         <button class="add-to-cart-btn" onclick="addToCart(5)">Add to Cart</button>
                     </div>
 
-                    <!-- Drink 2: Aik Chong Mocha -->
+                </div>
+            </div>
+
+            <!-- Category 2: Drink Powder -->
+            <div class="category-section">
+                <div class="category-title">🥤 Drink Powder</div>
+                <div class="products-grid">
+                    
+                    <!-- Drink 1: Aik Chong Chocolate -->
                     <div class="product-card">
-                        <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
-                            ☕ MOCHA
+                        <div class="product-image-box">
+                            <img src="https://i.ibb.co/jZkX9Ktf/AIKCHONG-CHOCOLATE.png" alt="AIKCHONG-CHOCOLATE">
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Mocha (1 Sachet)</h3>
+                            <h3>Aik Chong Chocolate (1 Sachet)</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price6">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock6">-</span></span>
@@ -804,13 +799,13 @@
                         <button class="add-to-cart-btn" onclick="addToCart(6)">Add to Cart</button>
                     </div>
 
-                    <!-- Drink 3: Aik Chong Cappuccino -->
+                    <!-- Drink 2: Aik Chong Mocha -->
                     <div class="product-card">
-                        <div class="product-image-box" style="background: #FFF3E4; font-weight: bold; color: var(--dark-orange); font-size: 11px; text-align: center; padding: 2px;">
-                            🥛 CAPPUCCINO
+                        <div class="product-image-box">
+                            <img src="https://i.ibb.co/PGCZRjH7/AIKCHONG-MOCHA.png" alt="AIKCHONG-MOCHA">
                         </div>
                         <div class="product-info">
-                            <h3>Aik Chong Cappuccino (1 Sachet)</h3>
+                            <h3>Aik Chong Mocha (1 Sachet)</h3>
                             <div class="product-details-row">
                                 <span class="price" id="price7">Loading...</span>
                                 <span class="stock-label">Stock: <span id="stock7">-</span></span>
@@ -824,6 +819,26 @@
                         <button class="add-to-cart-btn" onclick="addToCart(7)">Add to Cart</button>
                     </div>
 
+                    <!-- Drink 3: Aik Chong Cappuccino -->
+                    <div class="product-card">
+                        <div class="product-image-box">
+                            <img src="https://i.ibb.co/sdR6pxZj/AIKCHONG-CAPPUCCINO.png" alt="AIKCHONG-CAPPUCCINO">
+                        </div>
+                        <div class="product-info">
+                            <h3>Aik Chong Cappuccino (1 Sachet)</h3>
+                            <div class="product-details-row">
+                                <span class="price" id="price8">Loading...</span>
+                                <span class="stock-label">Stock: <span id="stock8">-</span></span>
+                            </div>
+                        </div>
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="updateQty(8, -1)">-</button>
+                            <span class="qty-display" id="qty8">0</span>
+                            <button class="qty-btn" onclick="updateQty(8, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(8)">Add to Cart</button>
+                    </div>
+
                 </div>
             </div>
 
@@ -831,7 +846,7 @@
             <div class="cart-section" id="cartSection">
                 <div class="cart-title">Your Cart Summary</div>
                 <div id="cartItemsList">
-                    <div style="font-size: 12px; color: var(--gray-text);">Cart is empty.</div>
+                    <div style="font-size: 12px; color: var(--gray-text); text-align:center; padding: 10px;">Cart is empty.</div>
                 </div>
                 <div class="cart-total">
                     <span>Total:</span>
@@ -917,15 +932,16 @@
     </div>
 
     <script>
-        // Data Produk
+        // Data Produk (ID 1-4: Ramen asal, ID 5: Maggi Kari, ID 6-8: Minuman Aik Chong)
         const products = {
             1: { name: "Hot Chicken (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             2: { name: "Cheese (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             3: { name: "Original (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
             4: { name: "Quattro (1 Pack)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            5: { name: "Aik Chong Chocolate (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            6: { name: "Aik Chong Mocha (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
-            7: { name: "Aik Chong Cappuccino (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 }
+            5: { name: "MAGGI KARI (1 bungkus / 5 pek)", price: 0, stock: 0, qty: 0, cartQty: 0 },
+            6: { name: "Aik Chong Chocolate (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
+            7: { name: "Aik Chong Mocha (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 },
+            8: { name: "Aik Chong Cappuccino (1 Sachet)", price: 0, stock: 0, qty: 0, cartQty: 0 }
         };
 
         // Tarik Data Google Sheets
